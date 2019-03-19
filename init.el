@@ -27,7 +27,7 @@
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink the current line after jumping
-       neotree           ; a project drawer, like NERDTree for vim
+       ;;neotree           ; a project drawer, like NERDTree for vim
        treemacs          ; a project drawer, like neotree but cooler
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
@@ -69,7 +69,7 @@
        lsp
        macos             ; MacOS-specific commands
        magit             ; a git porcelain for Emacs
-       ;;make              ; run make tasks from Emacs
+       make              ; run make tasks from Emacs
        ;;password-store    ; password manager for nerds
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
@@ -82,6 +82,7 @@
 
        :lang
        ;;assembly          ; assembly for fun or debugging
+       cc
        ;;(cc +irony +rtags); C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
@@ -156,19 +157,3 @@
        ;; provides a Spacemacs-inspired keybinding scheme and a smartparens
        ;; config. Use it as a reference for your own modules.
        (default +bindings +smartparens))
-
-(require 'company)
-(setq doom-font (font-spec :family "Source Code Pro" :size 15)
-      doom-theme 'doom-opera
-      company-idel-delay 0.2
-      company-minimum-prefix-length 2)
-
-;; (require 'lsp-mode)
-;; (use-package lsp-mode
-;;     :commands lsp
-;;     :ensure t
-;;     :diminish lsp-mode
-;;     :hook
-;;     (elixir-mode . lsp)
-;;     :init
-;;     (add-to-list 'exec-path "~/Projects/source/elixir-ls/release"))
